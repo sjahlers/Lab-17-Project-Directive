@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="portfolio.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+		<title>Sara Ahlers - Portfolio</title>
+	</head>
+
+	<body ng-app="projectApp">
+		<header>
+			<h1><a href="index.html">SARA AHLERS</a></h1>
+			<h2>Web Development and Design</h2>
+			<nav>
+				<a href="index.html">Home</a>
+				<a href="about.html">About</a>
+				<a href="portfolio.html">Portfolio</a>
+				<a href="contact.html">Contact</a>
+			</nav>
+		</header>
+		
+		<div class = "white page-heading">
+			<img src = "images/travel.png" class = "icons"/>
+			<h2>Portfolio</h2>
+		</div>
+		
+		<div class = "portfolio center white" ng-controller = "projectInfoController">
+			<sja-project-directive ng-repeat="project in projectInfo">
+			</sja-project-directive>
+		</div> <!--end of portfolio container-->
+	
+	<script src = "lib/angular.min.js"></script>
+	<script src = "lib/app.js"></script>
+	</body>
+</html>

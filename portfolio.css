@@ -1,0 +1,203 @@
+@font-face {
+	font-family: 'FiraSans-Light';
+	src: url('fonts/FiraSans-Light.otf');
+}
+
+@font-face {
+	font-family: 'FiraSans-Regular';
+	src: url('fonts/FiraSans-Regular.otf');
+}
+
+@font-face {
+	font-family: 'FiraSans-SemiBold';
+	src: url('fonts/FiraSans-SemiBold.otf');
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+header {
+	text-align: center;
+	width: 100%;
+	background-color: white;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(47, 158, 74);
+}
+
+header h1, header h2 {
+    display: inline;
+    margin: 20px;
+}
+
+header a {
+	text-decoration: none;
+	color: rgb(30, 122, 78);
+}
+
+body {
+	font-family: FiraSans-Light, Arial, sans-serif;
+	background: url('images/damask.jpg');
+	margin: 30px;
+	position: relative;
+}
+
+h1, h2 {
+	font-family: 'Bad Script', cursive, serif;
+	color: rgb(47, 158, 74);
+}
+
+h3 {
+	font-family: 'Bad Script', cursive, serif;
+	font-size: 1.25em;
+	color: rgb(30, 122, 78); 
+}
+
+.white {
+	background-color: rgba(255, 255, 255, 0.85);
+	padding: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	clear: both;
+	width: 90%;
+}
+
+.center {
+	text-align: center;
+}
+
+	/*Navigation Bar*/
+	
+	nav {
+		text-align: left;
+		background-color: rgb(30, 122, 78); 
+	}
+
+	nav a {
+		font-family: 'Bad Script', cursive, serif;
+		font-size: 25px;
+		text-decoration: none;
+		color: white;
+		display: inline-block;
+		padding: 5px 16px;
+	}
+
+	nav a:hover {
+		background-color: rgb(47, 158, 74);
+	}
+
+.icons {
+	width: 50px;
+	display: inline;
+	vertical-align: middle;
+}
+
+.page-heading h2 {
+	display: inline;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+
+.page-heading {
+	text-align: center;
+}
+
+/*Portfolio Page*/
+
+.portfolio {
+	width: 90%;
+	margin: 20px auto 0px auto;
+}
+
+.portfolio img {
+	max-width: 90%;
+}
+
+.grid-box {
+	display: inline-block;
+    width: 30%;
+    height: 30%;
+    margin: 10px;
+    border: 1px solid black;
+	border-radius: 2px;
+	vertical-align: top;
+	padding: 10px;
+	min-height: 350px;
+}
+
+.sourcecode {
+	font-size: .8em;
+}
+
+/*Media Queries - change layout depending on user screen-size*/
+
+@media(max-width: 875px) {
+	/* header {
+		background-image: url('images/travel-banner.jpg');
+		background-repeat: no-repeat;
+		background-position: left top;
+	}
+	
+	#title {
+		width: 70%;
+		margin: auto;
+		background-color: white;
+	} */
+	
+	.grid-box {	/*displays two side-by-side*/
+		width: 40%;
+		height: 40%;
+	}
+
+@media(max-width: 800px) {
+	.cover-box .icons {
+		left: -15px;
+	}
+}
+
+@media(max-width: 650px) {
+
+	header h1, header h2 {
+		display: block;
+		margin: 20px;
+		font-size: 125%;
+	}
+	
+	nav a { /*change nav display to vertical, center*/
+		display: block;
+		font-size: 125%;
+		padding: 5px 16px;
+		clear: both;
+		text-align: center;
+	}
+	
+	body {
+		position: static;
+	}
+	
+	#cover {
+		margin-top: 20px;
+	}
+	
+	.cover-box {
+		width: 90%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.grid-box { /*displays 1*/
+		display: block;
+		width: 90%;
+		height: 90%;
+	}
+	
+	
+	
